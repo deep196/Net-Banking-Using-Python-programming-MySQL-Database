@@ -1,0 +1,47 @@
+<html>
+ <body>
+ <script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>  
+   <h1>Internet Banking</h1>
+     <form action="/account_data" method="POST">
+        <fieldset>
+         <legend> Net Banking </legend>
+            <table>
+                    <tr>
+                        <td><label>Enter Account Number:</label></td>
+                        <td><input type="text" name="account_number" placeholder="account number"/></td>
+                    </tr>
+                    <tr>
+                        <td><label> Enter Your Name:</label></td>
+                        <td><input type="text" name="account_name" placeholder="name" /></td>
+                    </tr>
+                    <tr>
+                        <td><label> Enter Account Balance:</label></td>
+                        <td><input type="text" name="account_balance" placeholder="balance"/></td>
+                    </tr>
+                    <tr>
+                        <td><label>Enter Your Pin:</label></td>
+                        <td><input type="password" name="account_pin" placeholder="pin" id="myInput"></td>
+                        <td><input type="checkbox" onclick="myFunction()">Show Password
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right"> 
+                            <input type="submit" value="Submit"/>
+                        </td>  
+                    </tr> 
+                </table>
+        </fieldset>  
+     </form>
+    <a href="/check_account_balance"> check balance </a><br><br>
+    <a href="/check_account_details"> Account Details </a>
+  </body>
+</html>
